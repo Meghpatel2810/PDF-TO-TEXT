@@ -26,13 +26,14 @@ while os.path.exists(txt_path) :
 
     
 
+# ACTUAL CODE
+
 try :
 
     for page_number, img in enumerate(pages):
-        # Save image if needed
+        
         img.save(fr"Images\page_{page_number + 1}.png", "PNG")
         
-        # Perform OCR
         text = pytesseract.image_to_string(img)
 
         with open(txt_path,'a') as f:
