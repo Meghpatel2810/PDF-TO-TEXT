@@ -36,7 +36,7 @@ try :
         
         text = pytesseract.image_to_string(img)
 
-        with open(txt_path,'a') as f:
+        with open(txt_path,'a',encoding='utf-8') as f:
             f.write(f"Page number : {page_number+1} \n\n{text}\n")
 
 
